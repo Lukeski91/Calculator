@@ -60,4 +60,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void plusOnClick(View view) {
     }
+
+    public void decimalOnClick(View view) {
+    }
+
+    public void zeroOnClick(View view) {
+    }
+
+    public void equalOnClick(View view) {
+    }
 }
