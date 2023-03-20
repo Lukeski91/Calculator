@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -17,10 +22,10 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initTextView();
+        initTextViews();
     }
 
-    private void initTextView()
+    private void initTextViews()
     {
         workingsTV = (TextView)findViewById(R.id.workingTextView);
         resultsTV = (TextView)findViewById(R.id.resultTextView);
@@ -34,7 +39,18 @@ public class MainActivity extends AppCompatActivity
 
     public void equalOnClick(View view)
     {
+        Double result = null;
+        ScriptEngine engine = new ScriptEngineManager(.getEngineByName("rhino"));
 
+        try {
+            result = (double)engine.eval(workings);
+        } catch (ScriptException e)
+        {
+            Toast.makeText(this, "Invalid input", Toast.LENGTH_SHORT).show();
+        }
+
+        if(result != null)
+            resultsTV.setText(String.valueOf(result.doubleValue()));
     }
 
     public void clearOnClick(View view)
