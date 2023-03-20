@@ -4,22 +4,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
+    TextView workingsTV;
+    TextView resultsTV;
+
+    String workings = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initTextView();
+    }
+
+    private void initTextView()
+    {
+        workingsTV = (TextView)findViewById(R.id.workingTextView);
+        resultsTV = (TextView)findViewById(R.id.resultTextView);
+    }
+
+    private void setWorkings(String givenValue)
+    {
+        workings = workings + givenValue;
+        workingsTV.setText(workings);
     }
 
     public void clearOnClick(View view) {
-    }
-
-    public void bracketsOnClick(View view) {
-    }
-
-    public void powerOfOnClick(View view) {
     }
 
     public void divideOnClick(View view) {
