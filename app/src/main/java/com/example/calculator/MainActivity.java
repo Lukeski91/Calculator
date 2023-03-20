@@ -32,54 +32,91 @@ public class MainActivity extends AppCompatActivity
         workingsTV.setText(workings);
     }
 
-    public void clearOnClick(View view) {
+    public void equalOnClick(View view)
+    {
+
     }
 
-    public void divideOnClick(View view) {
+    public void clearOnClick(View view)
+    {
+        workingsTV.setText("");
+        workings = "";
+        resultsTV.setText("");
     }
 
-    public void sevenOnClick(View view) {
+    public void divideOnClick(View view)
+    {
+        setWorkings("/");
     }
 
-    public void eightOnClick(View view) {
+    public void sevenOnClick(View view)
+    {
+        setWorkings("7");
     }
 
-    public void nineOnClick(View view) {
+    public void eightOnClick(View view)
+    {
+        setWorkings("8");
     }
 
-    public void multiplyOnClick(View view) {
+    public void nineOnClick(View view)
+    {
+        setWorkings("9");
     }
 
-    public void fourOnClick(View view) {
+    public void multiplyOnClick(View view)
+    {
+        setWorkings("X");
     }
 
-    public void fiveOnClick(View view) {
+    public void fourOnClick(View view)
+    {
+        setWorkings("4");
     }
 
-    public void sixOnClick(View view) {
+    public void fiveOnClick(View view)
+    {
+        setWorkings("5");
     }
 
-    public void minusOnClick(View view) {
+    public void sixOnClick(View view)
+    {
+        setWorkings("6");
     }
 
-    public void oneOnClick(View view) {
+    public void minusOnClick(View view)
+    {
+        setWorkings("-");
     }
 
-    public void twoOnClick(View view) {
+    public void oneOnClick(View view)
+    {
+        setWorkings("1");
     }
 
-    public void threeOnClick(View view) {
+    public void twoOnClick(View view)
+    {
+        setWorkings("2");
     }
 
-    public void plusOnClick(View view) {
+    public void threeOnClick(View view)
+    {
+        setWorkings("3");
     }
 
-    public void decimalOnClick(View view) {
+    public void plusOnClick(View view)
+    {
+        setWorkings("+");
     }
 
-    public void zeroOnClick(View view) {
+    public void decimalOnClick(View view)
+    {
+        setWorkings(".");
     }
 
-    public void equalOnClick(View view) {
+    public void zeroOnClick(View view)
+    {
+        setWorkings("0");
     }
+
 }
