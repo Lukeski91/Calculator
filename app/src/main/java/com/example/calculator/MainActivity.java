@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity
     public void equalOnClick(View view)
     {
         Double result = null;
-        ScriptEngine engine = new ScriptEngineManager(.getEngineByName("rhino"));
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
 
         try {
             result = (double)engine.eval(workings);
@@ -80,9 +80,9 @@ public class MainActivity extends AppCompatActivity
         setWorkings("9");
     }
 
-    public void multiplyOnClick(View view)
+    public void timesOnClick(View view)
     {
-        setWorkings("X");
+        setWorkings("*");
     }
 
     public void fourOnClick(View view)
